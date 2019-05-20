@@ -1,0 +1,18 @@
+#New Project
+cd [folder]
+django-admin startproject [projname]
+
+#Create App inside proj
+$ python manage.py startapp [appname] 
+then register in /projname/settings.py -> Installed apps -> 'appname.apps.AppnameConfig'
+
+#Exec 
+cd ..
+django-admin startproject [projname]  -OR- python manage.py runserver / shell
+
+#DB
+python manage.py makemigrations
+python manage.py migrate
+
+#ADMIN 
+python manage.py createsuperuser

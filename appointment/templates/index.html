@@ -1,0 +1,11 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h2>Hi {{ usr.first_name }} :)</h2>
+<p>You have {{totalappointments}} classes comming soon</p>
+<ul>
+    {% for appo in appointments %}
+        <li>{{ appo.description }} on {{ appo.starting_at }} with teacher {{ appo.giver_user.first_name }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
