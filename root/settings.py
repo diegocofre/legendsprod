@@ -26,7 +26,7 @@ SECRET_KEY = '0dr4g_9ihgsx4=w!v_2p-5xrt5)fyt8g(z_t4@gz*r(#mvn7=n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['uberlegends.herokuapp.com','127.0.0.1']
 
 
 # Application definition
