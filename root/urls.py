@@ -18,12 +18,12 @@ from django.conf.urls.static import static
 from django.urls import include
 from django.contrib import admin
 from django.urls import path
-from appointment.urls import urlpatterns
+from ubniversity.urls import urlpatterns
 from django.views.generic import RedirectView
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('appointment/', include('appointment.urls')),
-    path('', RedirectView.as_view(url='/appointment/', permanent=True))
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    path('', include('ubniversity.urls')),
+    path('admin/', admin.site.urls),    
+    #path('', RedirectView.as_view(url='/course/', permanent=True))
+] 
 
