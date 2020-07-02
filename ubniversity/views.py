@@ -7,10 +7,10 @@ from .models import Organization, Teacher, Course, CourseDay, CourseClass
 
 logger = logging.getLogger(__name__)
 
-
 def index(request):
     try:
-        return render(request, "index.html", None)
+        courses = Course.objects.filter(active=True)
+        return render(request, 'courses.html', context={'actcourses': courses})
     except:
         logger.exception('')
 

@@ -1,0 +1,32 @@
+{% extends "index.html" %}
+{% block content %}
+<div id="pricing" class="container-fluid">
+    <div class="text-center">
+        <h2>OUR COURSES</h2>
+    </div>    
+    <div class="row slideanim">
+        {% for course in actcourses %}
+        <div class="col-sm-4 col-xs-12">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <h1>{{ course.name }}</h1>
+                    <h4>With {{ course.teacher.name }}</h2>
+                </div>
+                <div class="panel-body"> 
+                    <p>{{ course.description }}</p>                     
+                    <ul>
+                        <li><strong>LEVEL: {{ course.level.name }}</strong></li>
+                        <li><strong>FROM {{ course.age_from }} TO {{ course.age_to }} AGES</strong></li>
+                        <li><strong>{{ course.duration_minutes }} minutes class</strong></li>
+                    </ul>
+                </div>
+                <div class="panel-footer">
+                    <h3>{{ course.price }} {{ course.currency }}</h3>
+                    <button class="btn btn-lg btn-success">Sign Up Now!</button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>    
+</div>
+{% endblock %}
