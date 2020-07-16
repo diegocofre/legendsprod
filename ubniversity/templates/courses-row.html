@@ -1,0 +1,26 @@
+  <div class="row" data-aos="zoom-in" data-aos-delay="100">
+    {% for course in context.courses %}
+    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+      <div class="course-item">
+        <img src="{{ course.image_url }}" class="img-fluid" alt="...">
+        <div class="course-content">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h4>{{ course.short_name }}</h4>
+            <p class="price">{{ course.price }} {{ course.currency }}</p>
+          </div>
+          <h3><a href="/course-details/idcourse={{ course.id }}">{{ course.name }}</a></h3>
+          <p>{{ course.description}}</p>
+          <span>{{ course.level.name }} LEVEL</span>
+          <p>from {{ course.age_from }} to {{ course.age_to }} ages</p>
+          <span>{{ course.duration_minutes }} minutes class</span>
+          <div class="trainer d-flex justify-content-between align-items-center">
+            <div class="trainer-profile d-flex align-items-center">
+              <img src="{{ course.teacher.image_url }}" class="img-fluid" alt="{{ course.teacher.name}}">
+              <span>{{ course.teacher.name}} will be your host</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- End Course Item-->
+    {% endfor %}
+  </div>

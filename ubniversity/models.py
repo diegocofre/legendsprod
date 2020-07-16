@@ -9,6 +9,7 @@ import uuid
 class Organization(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=64)
+    image_url = models.CharField(max_length=256, null=True)
     active = models.BooleanField()
     created_at = models.DateTimeField(auto_now=False, auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True, auto_now_add=False)
@@ -21,6 +22,7 @@ class Organization(models.Model):
 class Level(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=64)
+    image_url = models.CharField(max_length=256, null=True)
     created_at = models.DateTimeField(auto_now=False, auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True, auto_now_add=False)
     deleted_at = models.DateTimeField(null=True, blank=True)
@@ -32,8 +34,10 @@ class Level(models.Model):
 class Teacher(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=64)
+    title = models.CharField(max_length=64)
     bio = models.CharField(max_length=2048)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+    image_url = models.CharField(max_length=256, null=True)
     active = models.BooleanField()
     created_at = models.DateTimeField(auto_now=False, auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True, auto_now_add=False)
@@ -46,10 +50,13 @@ class Teacher(models.Model):
 class Course(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=64)
+    short_name = models.CharField(max_length=16)
     description = models.CharField(max_length=128)
+    image_url = models.CharField(max_length=256, null=True)
     age_from = models.SmallIntegerField()
     age_to = models.SmallIntegerField()
-    level = models.ForeignKey(Level, on_delete=models.CASCADE, to_field="id", null=True)
+    level = models.ForeignKey(
+        Level, on_delete=models.CASCADE, to_field="id", null=True)
     time_zone = models.SmallIntegerField()
     max_attendants = models.SmallIntegerField()
     curr_attendants = models.SmallIntegerField(null=True, blank=True)
@@ -96,4 +103,4 @@ class CourseClass(models.Model):
     deleted_at = models.DateTimeField(null=True, blank=True)
 
     def __str__(self):
-        return self.datetime.tostring()
+        return '{0} {1}'.format(self.course.name, self.datetime.tostring)

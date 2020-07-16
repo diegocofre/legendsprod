@@ -1,200 +1,228 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Legends Language Centre</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="{% static 'ub_default.css' %}">
-</head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+{% extends "header-footer.html" %}
+{% block content %}
 
-<nav class="navbar navbar-default navbar-fixed-top">
+<!-- ======= About Section ======= -->
+<section id="about" class="about">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>About</h2>
+      <p>About Us</p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+        <img src="assets/img/about.jpg" class="img-fluid" alt="">
+      </div>
+      <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+        <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+        <p class="font-italic">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </p>
+        <ul>
+          <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+          <li><i class="icofont-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+          <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+            irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.
+          </li>
+        </ul>
+        <p>
+          Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        </p>
+        <a href="about.html" class="learn-more-btn">Learn More</a>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End About Section -->
+
+<!-- ======= Counts Section ======= -->
+<section id="counts" class="counts section-bg">
   <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#myPage">Logo</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#pricing">COURSES</a></li>
-        <li><a href="#services">OUR CLASSROOMS</a></li>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<div class="jumbotron text-center">
-  <h1>Legends Language Centre</h1> 
-  <p>Learn English online, anywhere, anytime</p> 
-  <form class="form-inline">
-    <div class="input-group">
-      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
-      <div class="input-group-btn">
-        <button type="button" class="btn btn-success">Subscribe to News!</button>
+
+    <div class="row counters">
+
+      <div class="col-lg-3 col-6 text-center">
+        <span data-toggle="counter-up">1232</span>
+        <p>Students</p>
       </div>
-    </div>
-  </form>
-</div>
 
-{% block content %}<!-- default content text (typically empty) -->{% endblock %}
+      <div class="col-lg-3 col-6 text-center">
+        <span data-toggle="counter-up">64</span>
+        <p>Courses</p>
+      </div>
 
+      <div class="col-lg-3 col-6 text-center">
+        <span data-toggle="counter-up">42</span>
+        <p>Events</p>
+      </div>
 
-<!-- Container (Services Section) -->
-<div id="services" class="container-fluid text-center">
-  <h2>OUR CLASSROOMS</h2>
-  <h4>This is us</h4>
-  <br>
-  <div class="row slideanim">
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-off logo-small"></span>
-      <h4>POWER</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+      <div class="col-lg-3 col-6 text-center">
+        <span data-toggle="counter-up">15</span>
+        <p>Trainers</p>
+      </div>
+
     </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-heart logo-small"></span>
-      <h4>LOVE</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
-    </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-lock logo-small"></span>
-      <h4>JOB DONE</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
-    </div>
+
   </div>
-  <br><br>
-  <div class="row slideanim">
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-leaf logo-small"></span>
-      <h4>GREEN</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
-    </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-certificate logo-small"></span>
-      <h4>CERTIFIED</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
-    </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-wrench logo-small"></span>
-      <h4 style="color:#303030;">HARD WORK</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
-    </div>
-  </div>
-</div>
+</section><!-- End Counts Section -->
 
-<!-- Container (About Section) -->
-<div id="about" class="container-fluid">
-  <div class="row">
-    <div class="col-sm-8">
-      <h2>About Legends Language Centre</h2><br>
-      <h4>We love teaching!</h4><br>
-      <p>Lorem ipsum dolor sit amet.</p>
-      <br><button class="btn btn-default btn-lg">Get in Touch</button>
-    </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-signal logo"></span>
-    </div>
-  </div>
-</div>
-{% comment %} 
-<div class="container-fluid bg-grey">
-  <div class="row">
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-globe logo slideanim"></span>
-    </div>
-    <div class="col-sm-8">
-      <h2>Our Values</h2><br>
-      <h4><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
-      <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-  </div>
-</div> 
-{% endcomment %}
+<!-- ======= Why Us Section ======= -->
+<section id="why-us" class="why-us">
+  <div class="container" data-aos="fade-up">
 
-
-<!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid bg-grey">
-  <h2 class="text-center">CONTACT</h2>
-  <div class="row">
-    <div class="col-sm-5">
-      <p>Contact us and we'll get back to you within 24 hours.</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
-      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
-    </div>
-    <div class="col-sm-7 slideanim">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-        </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+    <div class="row">
+      <div class="col-lg-4 d-flex align-items-stretch">
+        <div class="content">
+          <h3>Why Choose Legends?</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Duis aute irure dolor in reprehenderit
+            Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
+          </p>
+          <div class="text-center">
+            <a href="about.html" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+          </div>
         </div>
       </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-      <div class="row">
-        <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Send</button>
+      <div class="col-lg-8 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+        <div class="icon-boxes d-flex flex-column justify-content-center">
+          <div class="row">
+            <div class="col-xl-4 d-flex align-items-stretch">
+              <div class="icon-box mt-4 mt-xl-0">
+                <i class="bx bx-receipt"></i>
+                <h4>Corporis voluptates sit</h4>
+                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+              </div>
+            </div>
+            <div class="col-xl-4 d-flex align-items-stretch">
+              <div class="icon-box mt-4 mt-xl-0">
+                <i class="bx bx-cube-alt"></i>
+                <h4>Ullamco laboris ladore pan</h4>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+              </div>
+            </div>
+            <div class="col-xl-4 d-flex align-items-stretch">
+              <div class="icon-box mt-4 mt-xl-0">
+                <i class="bx bx-images"></i>
+                <h4>Labore consequatur</h4>
+                <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+              </div>
+            </div>
+          </div>
+        </div><!-- End .content-->
+      </div>
+    </div>
+
+  </div>
+</section><!-- End Why Us Section -->
+
+<!-- ======= Features Section ======= -->
+<section id="features" class="features">
+  <div class="container" data-aos="fade-up">
+
+    <div class="row" data-aos="zoom-in" data-aos-delay="100">
+      <div class="col-lg-3 col-md-4">
+        <div class="icon-box">
+          <i class="ri-store-line" style="color: #ffbb2c;"></i>
+          <h3><a href="">Lorem Ipsum</a></h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+        <div class="icon-box">
+          <i class="ri-bar-chart-box-line" style="color: #5578ff;"></i>
+          <h3><a href="">Dolor Sitema</a></h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+        <div class="icon-box">
+          <i class="ri-calendar-todo-line" style="color: #e80368;"></i>
+          <h3><a href="">Sed perspiciatis</a></h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
+        <div class="icon-box">
+          <i class="ri-paint-brush-line" style="color: #e361ff;"></i>
+          <h3><a href="">Magni Dolores</a></h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 mt-4">
+        <div class="icon-box">
+          <i class="ri-database-2-line" style="color: #47aeff;"></i>
+          <h3><a href="">Nemo Enim</a></h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 mt-4">
+        <div class="icon-box">
+          <i class="ri-gradienter-line" style="color: #ffa76e;"></i>
+          <h3><a href="">Eiusmod Tempor</a></h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 mt-4">
+        <div class="icon-box">
+          <i class="ri-file-list-3-line" style="color: #11dbcf;"></i>
+          <h3><a href="">Midela Teren</a></h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 mt-4">
+        <div class="icon-box">
+          <i class="ri-price-tag-2-line" style="color: #4233ff;"></i>
+          <h3><a href="">Pira Neve</a></h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 mt-4">
+        <div class="icon-box">
+          <i class="ri-anchor-line" style="color: #b2904f;"></i>
+          <h3><a href="">Dirada Pack</a></h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 mt-4">
+        <div class="icon-box">
+          <i class="ri-disc-line" style="color: #b20969;"></i>
+          <h3><a href="">Moton Ideal</a></h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 mt-4">
+        <div class="icon-box">
+          <i class="ri-base-station-line" style="color: #ff5828;"></i>
+          <h3><a href="">Verdo Park</a></h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 mt-4">
+        <div class="icon-box">
+          <i class="ri-fingerprint-line" style="color: #29cc61;"></i>
+          <h3><a href="">Flavor Nivelanda</a></h3>
         </div>
       </div>
     </div>
+
   </div>
-</div>
+</section><!-- End Features Section -->
+
+<!-- ======= Popular courses ======= -->
+<section id="popular-courses" class="courses">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Courses</h2>
+      <p>Our Popular Courses</p>
+    </div>
+    {% include "courses-row.html" %}
+  </div>
+</section>
+<!-- End Popular courses  Section -->
 
 
-<footer class="container-fluid text-center">
-  <a href="#myPage" title="To Top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a>
-  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
-</footer>
+<!-- ======= Trainers Section ======= -->
+<section id="trainers" class="trainers">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Teachers</h2>
+      <p>Our Professional Teachers</p>
+    </div>
 
-<script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    {% include "teachers-row.html" %}
 
-    // Prevent default anchor click behavior
-    event.preventDefault();
-
-    // Store hash
-    var hash = this.hash;
-
-    // Using jQuery's animate() method to add smooth page scroll
-    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-    $('html, body').animate({
-      scrollTop: $(hash).offset().top
-    }, 900, function(){
-   
-      // Add hash (#) to URL when done scrolling (default click behavior)
-      window.location.hash = hash;
-    });
-  });
-  
-  // Slide in elements on scroll
-  $(window).scroll(function() {
-    $(".slideanim").each(function(){
-      var pos = $(this).offset().top;
-
-      var winTop = $(window).scrollTop();
-        if (pos < winTop + 600) {
-          $(this).addClass("slide");
-        }
-    });
-  });
-})
-</script>
-
-</body>
-</html>
+  </div>
+</section><!-- End Trainers Section -->
+{% endblock %}
